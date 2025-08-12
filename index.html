@@ -56,7 +56,7 @@
       border-top-right-radius: 10px;
       transform-origin: top;
       transition: transform 1s ease-in-out;
-      z-index: 1;
+      z-index: 4;
     }
 
     /* Bow on the flap */
@@ -75,11 +75,10 @@
     /* Invitation image */
     .invite {
       position: absolute;
-      top: 25px;  /* ~30px below envelope (240 + 30) */
-      bottom: 0;
+      top: 250px;  /* ~30px below envelope (240 + 30) */
       left: 50%;
       transform: translateX(-50%) translateY(100%);
-      width: 350px;
+      width: 320px;
       height: 520px;
       background: url('Elegant Pathway to Tazkeen Birthday.png') center/cover no-repeat; /* CHANGE to your invite image */
       border: 2px solid black;
@@ -88,11 +87,13 @@
       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
       z-index: 3;
       opacity: 0;
+      bottom: auto;
     }
 
     /* Open state animations */
     .container.open .flap {
       transform: rotateX(-180deg);
+      z-index: 0; /* send flap behind invite when open */
     }
     .container.open .invite {
       transform: translateX(-50%) translateY(0);
@@ -123,17 +124,14 @@
     <div class="envelope">
       <div class="flap">
         <div class="bow"></div>
+        <img src="black-bow.png.avif" alt="Bow" />
       </div>
       </div>
       <div class="invite" id="invite"></div>
-      <img src="Elegant Pathway to Tazkeen Birthday.png" alt="Bow" />
-     <img src="black-bow.png.avif" alt="Bow" />
-    <audio src="Bella Notte - Jack Jezzro.mp3"></audio>
-    
   </div>
 
   <!-- Background Music -->
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop controls>
     <source src="Bella Notte - Jack Jezzro.mp3" type="audio/mp3">
   </audio>
 
@@ -163,4 +161,5 @@
   </script>
 </body>
 </html>
+
 
