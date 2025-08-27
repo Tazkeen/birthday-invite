@@ -8,7 +8,7 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: white;
+      background: #111;
       font-family: 'Playfair Display', serif;
       height: 100vh;
       display: flex;
@@ -30,7 +30,7 @@
     /* Envelope body */
     .envelope {
       width: 100%;
-      height: 240px; /* keep envelope smaller */
+      height: 200px; /* keep envelope smaller */
       background: white;
       border: 2px solid black;
       border-radius: 10px;
@@ -43,7 +43,7 @@
     /* Envelope flap */
     .flap {
       position: absolute;
-      top: 0;
+      top: -35%;
       left: 0;
       width: 100%;
       height: 50%;
@@ -75,7 +75,7 @@
     /* Invitation image */
     .invite {
       position: absolute;
-      top: 25px;  /* ~30px below envelope (240 + 30) */
+      top: -45%; 
       bottom: 0;
       left: 50%;
       transform: translateX(-50%) translateY(100%);
@@ -178,4 +178,5 @@
   </script>
 </body>
 </html>
+
 
